@@ -1,0 +1,33 @@
+# Run as administrator
+# Install chocolatey https://chocolatey.org/
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+
+# Run as administrator
+# Apps
+choco install totalcommander --confirm
+choco install 7zip.install --confirm
+choco install git.install --confirm -params /NoAutoCrlf 
+choco install sysinternals --confirm
+choco install skype --confirm
+choco install putty --confirm
+choco install curl --confirm
+choco install paint.net --confirm
+choco install fiddler --confirm
+choco install notepadplusplus --confirm
+choco install openssl.light --confirm
+choco install wireshark --confirm
+choco install tortoisegit --confirm
+choco install linqpad4 --confirm
+choco install lockhunter --confirm
+choco install rdcman --confirm
+choco install ilspy --confirm
+choco install windbg --confirm
+choco install google-chrome-x64 --confirm
+choco install agentransack --confirm
+choco install teracopy --confirm -pre
+choco install nimbletext --confirm
+
+# Run as administrator
+# Games and media
+choco install steam --confirm
+choco install mpc-hc --confirm
