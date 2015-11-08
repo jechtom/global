@@ -26,6 +26,7 @@ choco install google-chrome-x64 --confirm
 choco install agentransack --confirm
 choco install teracopy --confirm -pre
 choco install nimbletext --confirm
+choco install rufus --confirm
 
 # Run as administrator
 # Games and media
