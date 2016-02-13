@@ -27,9 +27,10 @@ choco install agentransack --confirm
 choco install teracopy --confirm -pre
 choco install nimbletext --confirm
 choco install rufus --confirm
-choco install irfanview --confirm
 
 # Run as administrator
 # Games and media
 choco install steam --confirm
 choco install mpc-hc --confirm
+choco install irfanview --confirm
+choco install fsviewer --confirm
