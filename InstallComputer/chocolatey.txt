@@ -24,9 +24,9 @@ choco install ilspy --confirm
 choco install windbg --confirm
 choco install google-chrome-x64 --confirm
 choco install agentransack --confirm
-choco install teracopy --confirm -pre
 choco install nimbletext --confirm
 choco install rufus --confirm
+choco install winscp --confirm
 
 # Run as administrator
 # Games and media
