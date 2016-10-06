@@ -29,8 +29,11 @@ choco install rufus --confirm
 choco install winscp --confirm
 
 # Run as administrator
+# These I usually have in portable version
+choco install keepass --confirm
+
+# Run as administrator
 # Games and media
 choco install steam --confirm
 choco install mpc-hc --confirm
-choco install irfanview --confirm
-choco install fsviewer --confirm
+choco install spotify --confirm
