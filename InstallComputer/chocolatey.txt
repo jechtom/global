@@ -27,6 +27,7 @@ choco install agentransack --confirm
 choco install nimbletext --confirm
 choco install rufus --confirm
 choco install winscp --confirm
+choco install nugetpackageexplorer --confirm
 
 # Run as administrator
 # These I usually have in portable version
