@@ -13,6 +13,7 @@ choco install putty --confirm
 choco install curl --confirm
 choco install paint.net --confirm
 choco install fiddler --confirm
+choco install visualstudiocode --confirm
 choco install notepadplusplus --confirm
 choco install openssl.light --confirm
 choco install wireshark --confirm
@@ -28,6 +29,8 @@ choco install nimbletext --confirm
 choco install rufus --confirm
 choco install winscp --confirm
 choco install nugetpackageexplorer --confirm
+choco install vim --confirm
+choco install postman --confirm
 
 # Run as administrator
 # These I usually have in portable version
