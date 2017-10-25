@@ -27,6 +27,7 @@ choco install google-chrome-x64 --confirm
 choco install agentransack --confirm
 choco install nimbletext --confirm
 choco install rufus --confirm
+choco install win32diskimager --confirm
 choco install winscp --confirm
 choco install nugetpackageexplorer --confirm
 choco install vim --confirm
