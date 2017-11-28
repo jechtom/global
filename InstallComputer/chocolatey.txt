@@ -32,6 +32,7 @@ choco install winscp --confirm
 choco install nugetpackageexplorer --confirm
 choco install vim --confirm
 choco install postman --confirm
+choco install logparser --confirm
 
 # Run as administrator
 # These I usually have in portable version
