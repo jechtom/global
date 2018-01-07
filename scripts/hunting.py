@@ -173,6 +173,8 @@ def main(argv):
             print('New items after filter applied:', len(newItems))
         else:
             print('No filter applied. All new items are valid.')
+
+    if any(newItems):
         sendMailWithItems(newItems, title, mailTo, smtpServer, smtpPort, smtpUser, smtpPassword)
     else:
         print('No new items')
