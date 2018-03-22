@@ -7,13 +7,13 @@
 apt-get install sudo
 sudo apt-get install apt-transport-https
 
-# add bintray.com source list
+# add source lists
 echo "deb https://dl.bintray.com/rabbitmq/debian stretch main" | sudo tee /etc/apt/sources.list.d/bintray.rabbitmq.list
 echo "deb https://packages.erlang-solutions.com/debian stretch contrib" | sudo tee /etc/apt/sources.list.d/erlang.list
 
-# add signing key
-wget -O- https://www.rabbitmq.com/rabbitmq-release-signing-key.asc | sudo apt-key add -
+# add signing keys
 wget -O- https://packages.erlang-solutions.com/debian/erlang_solutions.asc | sudo apt-key add -
+wget -O- https://www.rabbitmq.com/rabbitmq-release-signing-key.asc | sudo apt-key add -
 
 # pin version - see for expected version https://www.rabbitmq.com/which-erlang.html
 cat >/etc/apt/preferences.d/erlang <<EOL
@@ -49,8 +49,8 @@ sudo service rabbitmq-server start
 # default user set
 rabbitmqctl delete_user guest
 
-# to create admin
-rabbitmqctl add_user admin NEW_PASSWORD_HERE
-rabbitmqctl set_user_tags admin administrator
+# to create admin use: ...and change password!
+# rabbitmqctl add_user admin NEW_PASSWORD_HERE
+# rabbitmqctl set_user_tags admin administrator
 
 # check http://localhost:15672/ for management portal
