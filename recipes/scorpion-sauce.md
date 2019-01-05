@@ -25,6 +25,6 @@
 
 1. Wear gloves
 1. Mix everything in blender
-1. Verify PH is not less than 4 (ideally about 3.4). If not, add vinegar, mix and test again.
+1. Verify that PH is less than 4 (ideally about 3.4). If not, add vinegar, mix and test again.
 1. Heat to 85°C and bottle sauce
 1. Bottle the sauce and clean everything properly
