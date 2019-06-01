@@ -33,6 +33,9 @@ choco install windows10-media-creation-tool --confirm
 choco install rufus --confirm
 choco install qbittorrent --confirm
 choco install sql-server-management-studio --confirm
+choco install mousewithoutborders --confirm
+choco install duplicati --confirm
+choco install cmdermini --confirm
 
 # Run as administrator
 # These I usually have in portable version
