@@ -32,6 +32,7 @@ choco install dotnetcore-sdk --confirm
 choco install windows10-media-creation-tool --confirm
 choco install rufus --confirm
 choco install qbittorrent --confirm
+choco install sql-server-management-studio --confirm
 
 # Run as administrator
 # These I usually have in portable version
@@ -44,3 +45,4 @@ choco install mpc-hc --confirm
 choco install spotify --confirm
 choco install slack --confirm
 choco install dosbox --confirm
+choco install whatsapp --confirm
