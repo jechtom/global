@@ -1,6 +1,6 @@
 # Run as administrator
 # Install chocolatey https://chocolatey.org/
-@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 
 # Run as administrator
 # Apps
@@ -28,7 +28,9 @@ choco install postman --confirm
 choco install logparser --confirm
 choco install coretemp --confirm
 choco install nodejs --confirm
-choco install dotnetcore-sdk
+choco install dotnetcore-sdk --confirm
+choco install windows10-media-creation-tool --confirm
+choco install rufus --confirm
 
 # Run as administrator
 # These I usually have in portable version
