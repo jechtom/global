@@ -8,7 +8,6 @@ choco install totalcommander --confirm
 choco install 7zip.install --confirm
 choco install git.install --confirm -params /NoAutoCrlf 
 choco install sysinternals --confirm
-choco install skype --confirm
 choco install putty --confirm
 choco install curl --confirm
 choco install paint.net --confirm
@@ -18,28 +17,27 @@ choco install notepadplusplus --confirm
 choco install openssl.light --confirm
 choco install wireshark --confirm
 choco install tortoisegit --confirm
-choco install linqpad4 --confirm
 choco install lockhunter --confirm
 choco install rdcman --confirm
 choco install ilspy --confirm
 choco install windbg --confirm
 choco install google-chrome-x64 --confirm
-choco install agentransack --confirm
-choco install nimbletext --confirm
-choco install rufus --confirm
-choco install win32diskimager --confirm
 choco install winscp --confirm
 choco install nugetpackageexplorer --confirm
 choco install vim --confirm
 choco install postman --confirm
 choco install logparser --confirm
+choco install coretemp --confirm
+choco install nodejs --confirm
+choco install dotnetcore-sdk
 
 # Run as administrator
 # These I usually have in portable version
 choco install keepass --confirm
 
 # Run as administrator
-# Games and media
+# Games and media and communication
 choco install steam --confirm
 choco install mpc-hc --confirm
 choco install spotify --confirm
+choco install slack --confirm
