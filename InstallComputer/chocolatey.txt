@@ -20,7 +20,6 @@ choco install tortoisegit --confirm
 choco install lockhunter --confirm
 choco install rdcman --confirm
 choco install ilspy --confirm
-choco install windbg --confirm
 choco install google-chrome-x64 --confirm
 choco install winscp --confirm
 choco install nugetpackageexplorer --confirm
