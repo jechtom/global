@@ -137,7 +137,11 @@ def main(argv):
     print('Local store path:', path)
     print('Filter regex:', regexFilter)
     print('Fetching:', url)
-    with urllib.request.urlopen(url) as f:
+	
+    req = urllib.request.Request(url)
+    req.add_header('user-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36')
+	
+    with urllib.request.urlopen(req) as f:
         content = f.read().decode('utf-8')
         contentParser = huntingParser()
         contentParser.feed(content)
@@ -183,7 +187,6 @@ def main(argv):
         Path(path).write_text(json.dumps(knownItems))
 
     print('Done')
-
 
 import sys
 if __name__ == "__main__":
