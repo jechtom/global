@@ -1,5 +1,5 @@
 ﻿# This script returns installed version of .NET 4.*
-# from github.com/jechtom/global/scripts/netver.ps1
+# Latest version: https://github.com/jechtom/global/blob/master/scripts/netver.ps1
 # Data source: https://github.com/dotnet/docs/blob/master/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md
 
 $release = (Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release
