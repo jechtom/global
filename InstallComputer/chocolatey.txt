@@ -1,51 +1,35 @@
 # Run as administrator
 # Install chocolatey https://chocolatey.org/
-@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 
 # Run as administrator
 # Apps
-choco install totalcommander --confirm
+# choco install totalcommander --confirm -params /InstallPath:c:\programs\totalcmd ## needs manual installation
+choco install googlechrome --confirm
 choco install 7zip.install --confirm
 choco install git.install --confirm -params /NoAutoCrlf 
 choco install sysinternals --confirm
 choco install putty.install --confirm
-choco install curl --confirm
 choco install paint.net --confirm
 choco install fiddler --confirm
 choco install visualstudiocode --confirm
-choco install notepadplusplus.install --confirm
 choco install openssl.light --confirm
 choco install wireshark --confirm
 choco install tortoisegit --confirm
 choco install lockhunter --confirm
 choco install rdcman --confirm
 choco install ilspy --confirm
-choco install googlechrome --confirm
 choco install winscp --confirm
 choco install nugetpackageexplorer --confirm
-choco install vim --confirm
 choco install postman --confirm
-choco install logparser --confirm
 choco install coretemp --confirm
 choco install nodejs.install --confirm
-choco install dotnetcore-sdk --confirm
-choco install windows10-media-creation-tool --confirm
-choco install rufus --confirm
 choco install qbittorrent --confirm
 choco install sql-server-management-studio --confirm
 choco install mousewithoutborders --confirm
-choco install duplicati --confirm
-choco install cmdermini --confirm
-
-# Run as administrator
-# These I usually have in portable version
-choco install keepass --confirm
+# choco install duplicati --confirm # not newest version
 
 # Run as administrator
 # Games and media and communication
 choco install steam --confirm
 choco install mpc-hc --confirm
 choco install spotify --confirm
-choco install slack --confirm
-choco install dosbox --confirm
-choco install whatsapp --confirm
