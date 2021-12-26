@@ -49,3 +49,4 @@ choco install spotify --confirm
 choco install slack --confirm
 choco install dosbox --confirm
 choco install whatsapp --confirm
+choco install mumble --confirm
