@@ -34,4 +34,5 @@ choco install steam --confirm
 choco install mpc-hc --confirm
 choco install mumble --confirm
 choco install spotify --confirm
+choco install telegram --confirm
 
