@@ -26,6 +26,7 @@ choco install nodejs.install --confirm
 choco install qbittorrent --confirm
 choco install sql-server-management-studio --confirm
 choco install mousewithoutborders --confirm
+choco install openvpn --confirm
 # choco install duplicati --confirm # not newest version
 
 # Run as administrator
