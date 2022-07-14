@@ -35,4 +35,6 @@ choco install mpc-hc --confirm
 choco install mumble --confirm
 choco install spotify --confirm
 choco install telegram --confirm
+choco install whatsapp --confirm
+choco install discord --confirm
 
