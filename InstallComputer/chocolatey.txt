@@ -33,7 +33,6 @@ choco install openvpn --confirm
 # Games and media and communication
 choco install steam --confirm
 choco install mpc-hc --confirm
-choco install mumble --confirm
 choco install spotify --confirm
 choco install telegram --confirm
 choco install whatsapp --confirm
