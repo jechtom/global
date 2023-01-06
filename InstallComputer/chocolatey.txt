@@ -1,7 +1,6 @@
 # Run as administrator
 # Install chocolatey https://chocolatey.org/
 
-# Run as administrator
 # Apps
 # choco install totalcommander --confirm -params /InstallPath:c:\programs\totalcmd ## needs manual installation
 choco install googlechrome --confirm
@@ -29,7 +28,6 @@ choco install mousewithoutborders --confirm
 choco install openvpn --confirm
 # choco install duplicati --confirm # not newest version
 
-# Run as administrator
 # Games and media and communication
 choco install steam --confirm
 choco install mpc-hc --confirm
@@ -38,3 +36,5 @@ choco install telegram --confirm
 choco install whatsapp --confirm
 choco install discord --confirm
 
+# Hobby projects
+choco install kicad --confirm
