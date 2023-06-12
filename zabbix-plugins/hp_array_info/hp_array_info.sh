@@ -71,7 +71,7 @@ def process_lines_to_json(lines):
     return json.dumps(result, indent=4)
 
 def read_ssacli_lines(slot_index):
-    cli_result = subprocess.run(['ssacli', 'ctrl', 'slot=' + slot_index, 'physicaldrive', 'all', 'show', 'detail'], stdout=subprocess.PIPE)
+    cli_result = subprocess.run(['sudo', 'ssacli', 'ctrl', 'slot=' + slot_index, 'physicaldrive', 'all', 'show', 'detail'], stdout=subprocess.PIPE)
     lines = str.splitlines(cli_result.stdout.decode('utf-8'))
     return lines
 

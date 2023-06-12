@@ -21,7 +21,11 @@ chmod +x hp_array_info.sh
 popd
 sudo systemctl restart zabbix-agent2
 
+# allow to run sudo ssacli without password for the zabbix user
+echo "zabbix ALL=(root) NOPASSWD: /usr/sbin/ssacli ctrl slot=0 physicaldrive all show detail" > /etc/sudoers.d/allow-zabbix-sudo-ssacli
+
 # test with:
+sudo -u zabbix bash
 zabbix_agent2 -t hp_array_info
 ```
 
