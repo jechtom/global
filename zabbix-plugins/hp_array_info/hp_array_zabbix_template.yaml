@@ -1,0 +1,105 @@
+zabbix_export:
+  version: '6.4'
+  template_groups:
+    - uuid: e960332b3f6c46a1956486d4f3f99fce
+      name: 'Templates/Server hardware'
+  templates:
+    - uuid: 22a80a32e4f64e1085603268f059b1d7
+      template: 'HP Smart Array via ssacli'
+      name: 'HP Smart Array via ssacli'
+      description: |
+        Monitors HP Smart Array via ssacli tool.
+        
+        Plugin and readme: https://github.com/jechtom/global/tree/master/zabbix-plugins/hp_array_info
+        
+        By @jechtom.
+      groups:
+        - name: Templates/My
+        - name: 'Templates/Server hardware'
+      items:
+        - uuid: 179c750528894702b9511d3a22a124c7
+          name: 'HP Smart Array Info Json'
+          key: hp_array_info
+          delay: 60m
+          history: '0'
+          trends: '0'
+          value_type: TEXT
+          description: 'JSON with HP Smart Array data.'
+        - uuid: be6cc4391b934f1c88eeec85d8b95396
+          name: 'HP Smart Array - Physical Drives Count'
+          type: DEPENDENT
+          key: hp_array_info.count
+          delay: '0'
+          description: 'Count of physical drives.'
+          preprocessing:
+            - type: JSONPATH
+              parameters:
+                - $.length()
+          master_item:
+            key: hp_array_info
+          triggers:
+            - uuid: 51da512e47f04c5fa8610cfdfe7d0c07
+              expression: 'nodata(/HP Smart Array via ssacli/hp_array_info.count,2h)=1'
+              name: 'HP Smart Array - No Data'
+              priority: AVERAGE
+              description: 'No dada received from Zabbix agent.'
+            - uuid: 7d7c7c13b5374a6b90dcba8dac1797f2
+              expression: 'last(/HP Smart Array via ssacli/hp_array_info.count)=0'
+              name: 'HP Smart Array - No Physical Drives'
+              priority: WARNING
+              description: 'No physical devices found on smart array. Disable this trigger if that is OK.'
+            - uuid: f988c0a046be4295b15df62179af7023
+              expression: 'last(/HP Smart Array via ssacli/hp_array_info.count,#1)<>last(/HP Smart Array via ssacli/hp_array_info.count,#2)'
+              name: 'HP Smart Array - Physical Drives Count Changed'
+              priority: INFO
+              manual_close: 'YES'
+      discovery_rules:
+        - uuid: 4d10df8acb3d491a904b78506bb25ee1
+          name: 'HP Smart Array Physical Drives Discovery'
+          type: DEPENDENT
+          key: hp_array_info.physical_drives_discovery
+          delay: '0'
+          item_prototypes:
+            - uuid: 177772308b754df09b40b39036e818cb
+              name: 'HP Smart Array - Physical Drive at Bay {#DEVICE_BAY} - Status'
+              type: DEPENDENT
+              key: 'hp_array_info.physical_drive_status[{#DEVICE_ID}]'
+              delay: '0'
+              trends: '0'
+              value_type: TEXT
+              description: 'Gets status of physical drive.'
+              preprocessing:
+                - type: JSONPATH
+                  parameters:
+                    - '$[?(@.id== ''{#DEVICE_ID}'')].status.first()'
+              master_item:
+                key: hp_array_info
+              trigger_prototypes:
+                - uuid: 333a11a8735148c7beb97824235f4c46
+                  expression: 'last(/HP Smart Array via ssacli/hp_array_info.physical_drive_status[{#DEVICE_ID}])<>"OK"'
+                  name: 'HP Smart Array - Physical Drive at Bay {#DEVICE_BAY} - Status Not OK'
+                  priority: HIGH
+                  description: 'One of physical disks is not OK.'
+            - uuid: 9ffac5d8b9484d5e99cd29b58a60f44b
+              name: 'HP Smart Array - Physical Drive at Bay {#DEVICE_BAY} - Temperature'
+              type: DEPENDENT
+              key: 'hp_array_info.physical_drive_temperature[{#DEVICE_ID}]'
+              delay: '0'
+              units: °C
+              preprocessing:
+                - type: JSONPATH
+                  parameters:
+                    - '$[?(@.id== ''{#DEVICE_ID}'')].currentTemperatureC.first()'
+              master_item:
+                key: hp_array_info
+          master_item:
+            key: hp_array_info
+          lld_macro_paths:
+            - lld_macro: '{#DEVICE_ARRAY}'
+              path: $.array
+            - lld_macro: '{#DEVICE_BAY}'
+              path: $.bay
+            - lld_macro: '{#DEVICE_BOX}'
+              path: $.box
+            - lld_macro: '{#DEVICE_ID}'
+              path: $.id

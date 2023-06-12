@@ -11,6 +11,8 @@ Tested with HP Smart Array P410i on Ubuntu 22.
 
 ## Install to Zabbix Agent 2
 
+First you need to install plugin to server with HP Smart Array.
+
 ```bash
 # install 
 sudo -s
@@ -31,7 +33,11 @@ zabbix_agent2 -t hp_array_info
 
 ## Zabbix Template
 
-TBD
+Import [template](./hp_array_zabbix_template.yaml) and assign to server with HP Smart Array. Data are fetched once per hour.
+
+![Zabbix - Latest Data](./screen1.png)
+
+![Zabbix - Triggers Data](./screen2.png)
 
 ## Example Output
 
