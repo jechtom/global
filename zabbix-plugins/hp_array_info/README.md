@@ -33,7 +33,7 @@ zabbix_agent2 -t hp_array_info
 
 ## Zabbix Template
 
-Import [template](./hp_array_zabbix_template.yaml) and assign to server with HP Smart Array. Data are fetched once per hour.
+Import [template](./hp_array_zabbix_template.yaml) and assign to server with HP Smart Array. Data is fetched once per hour.
 
 ![Zabbix - Latest Data](./screen1.png)
 
