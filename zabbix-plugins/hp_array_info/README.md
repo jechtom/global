@@ -17,8 +17,8 @@ First you need to install plugin to server with HP Smart Array.
 # install 
 sudo -s
 pushd /etc/zabbix/zabbix_agent2.d/plugins.d/
-wget https://github.com/jechtom/global/raw/master/zabbix-plugins/hp_array_info/hp_array_info.conf
-wget https://github.com/jechtom/global/raw/master/zabbix-plugins/hp_array_info/hp_array_info.sh
+wget -O hp_array_info.conf https://github.com/jechtom/global/raw/master/zabbix-plugins/hp_array_info/hp_array_info.conf
+wget -O hp_array_info.sh https://github.com/jechtom/global/raw/master/zabbix-plugins/hp_array_info/hp_array_info.sh
 chmod +x hp_array_info.sh
 popd
 sudo systemctl restart zabbix-agent2
