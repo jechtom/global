@@ -26,6 +26,7 @@ choco install qbittorrent --confirm
 choco install sql-server-management-studio --confirm
 choco install mousewithoutborders --confirm
 choco install openvpn --confirm
+choco install imagemagick.app --confirm
 # choco install duplicati --confirm # not newest version
 
 # Games and media and communication
