@@ -1,5 +1,7 @@
 # Guide: Host Natural Selection 2 Dedicated Server
 
+Remark: You can start the NS2 dedicated server from the game. But for some reason, we have several issues with that. The game was unstable and if the host minimized the window, the game froze.
+
 ## Windows - Powershell
 
 1. Server: Download [`steamcmd`](https://developer.valvesoftware.com/wiki/SteamCMD#Windows) and extract.
