@@ -1,6 +1,6 @@
 # Guide: Host Natural Selection 2 Dedicated Server
 
-Remark: You can start the NS2 dedicated server from the game. But for some reason, we have several issues with that. The game was unstable and if the host minimized the window, the game froze.
+Remark: You can start the NS2 dedicated server from the game. But we have issues with that - the game was unstable and if the host minimized the window, the game froze.
 
 ## Windows - Powershell
 
