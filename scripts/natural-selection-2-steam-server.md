@@ -24,7 +24,7 @@ while(-not $Env:NS2_ADMIN_PASSWORD) { $Env:NS2_ADMIN_PASSWORD = Read-Host "Enter
    - To play infested marines mod:
       - install/enable/disable or "Mods" mode - search for "Infested"
       - enable/disable on "Maps"
-      - then change map -> replace `ns2_` with `infested_`; for example "sv_changemap infested_eclipse"
+      - then change map
 
 6. Server: Allow ports on firewall
    - Incoming: 27015/tcp (steam)
