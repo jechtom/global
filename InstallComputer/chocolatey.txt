@@ -38,6 +38,7 @@ choco install spotify --confirm
 choco install telegram --confirm
 choco install whatsapp --confirm
 choco install discord --confirm
+choco install obs-studio --confirm
 
 # Hobby projects
 choco install kicad --confirm
