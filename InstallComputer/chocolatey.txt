@@ -31,6 +31,7 @@ choco install soapui --confirm
 choco install imhex -y
 choco install python3 -y
 # choco install duplicati --confirm # not newest version
+choco install microsoftazurestorageexplorer -y
 
 # Games and media and communication
 choco install steam --confirm
