@@ -25,7 +25,8 @@ choco install nodejs.install --confirm
 choco install qbittorrent --confirm
 choco install sql-server-management-studio --confirm
 choco install mousewithoutborders --confirm
-choco install openvpn --confirm
+# choco install openvpn --confirm // replaced by wireguard
+choco install wireguard --confirm
 choco install imagemagick.app --confirm
 choco install soapui --confirm
 choco install imhex -y
